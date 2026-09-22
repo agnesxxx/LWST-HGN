@@ -1,24 +1,8 @@
-# LWST-HGN: A Learnable Wavelet-Enhanced Spatio-Temporal Hypergraph Network for Soft Sensing
+# LWST-HGN
 
 Official-style release code for the **UCI Air Quality C6H6(GT) soft-sensing task**.
 This repository contains the cleaned single-task version corresponding to the
 best reported AirQuality result.
-
-## Method overview
-
-The released model contains four main components:
-
-1. **Target-guided correlation screening**: absolute Pearson correlation is
-   computed on the training split only, and the three least-correlated inputs
-   are removed.
-2. **Learnable wavelet enhancement**: a db2 low-pass prototype is learnable;
-   the high-pass filter is generated through the QMF relation. Low- and
-   high-frequency responses are injected through residual enhancement.
-3. **Multi-scale gated temporal convolution (MS-GTC)**: temporal kernels
-   `{3, 5, 7}` are fused with a learned `1x1` gate convolution and Softmax.
-4. **Static hypergraph learning**: a node-centered kNN hypergraph (`k=3`) is
-   built from training windows, followed by temporal-hypergraph blocks and a
-   node-aware readout.
 
 ## Repository structure
 
