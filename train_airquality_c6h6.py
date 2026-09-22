@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-LWST-HGN: A Learnable Wavelet-Enhanced Spatio-Temporal Hypergraph Network for Soft Sensing
-for soft sensing on the UCI Air Quality dataset (C6H6(GT) task).
 
 This open-source training script is the cleaned release version corresponding to
 our best AirQuality/C6H6_GT configuration. The learning/model logic is preserved
