@@ -1,4 +1,4 @@
-# LWST-HGN: A Learnable Wavelet-Enhanced Spatio-Temporal Hypergraph Network for Soft Sensing
+# LWST-HGN
 
 ## AirQuality 开源代码说明
 
