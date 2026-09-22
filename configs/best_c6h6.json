@@ -1,0 +1,64 @@
+{
+  "dataset": "UCI Air Quality",
+  "target": "C6H6_GT",
+  "input_mode": "strict",
+  "split_mode": "segment",
+  "split_train": 0.6,
+  "split_val": 0.2,
+  "split_test": 0.2,
+  "window": 3,
+  "target_transform": "log1p",
+  "correlation_screening": {
+    "enabled": true,
+    "remove_n": 3,
+    "reference_removed_variables": [
+      "AH",
+      "RH",
+      "T"
+    ]
+  },
+  "hypergraph": {
+    "mode": "static",
+    "k": 3
+  },
+  "model": {
+    "num_mixers": 2,
+    "mixer_hidden": 64,
+    "embed_dim": 32,
+    "num_blocks": 2,
+    "readout_hidden": 64,
+    "dropout": 0.1,
+    "ms_gtc_kernels": [
+      3,
+      5,
+      7
+    ],
+    "ms_gtc_dilations": [
+      1
+    ],
+    "ms_gtc_fusion": "gated"
+  },
+  "learnable_wavelet": {
+    "initialization": "db2",
+    "position": "post_mixer",
+    "alpha": 0.055,
+    "learnable_alpha": false,
+    "filter_norm": true,
+    "lowpass_branch": true,
+    "lowpass_mode": "residual",
+    "rho": 0.5,
+    "energy_lambda": 0.0001
+  },
+  "training": {
+    "loss": "huber",
+    "huber_delta": 1.0,
+    "selection_metric": "nrmse",
+    "optimizer": "AdamW",
+    "lr": 0.0015,
+    "weight_decay": 0.0001,
+    "batch_size": 128,
+    "max_epochs": 150,
+    "early_stopping_patience": 25,
+    "seed": 3407
+  }
+}

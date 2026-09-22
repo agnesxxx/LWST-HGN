@@ -1,0 +1,16 @@
+{
+  "note": "Reference result from the released best C6H6_GT experiment. Small numerical differences can occur across PyTorch/CUDA/hardware versions.",
+  "best_epoch": 147,
+  "validation": {
+    "NMAE": 0.427638,
+    "NRMSE": 0.926696,
+    "MAPE": 4.363315,
+    "R2": 0.995141
+  },
+  "test": {
+    "NMAE": 0.768057,
+    "NRMSE": 1.074252,
+    "MAPE": 7.656405,
+    "R2": 0.995024
+  }
+}
